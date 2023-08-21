@@ -1,0 +1,209 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#text-above-typing {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+#typing-container {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+#button-container {
+    display: flex;
+    gap: 20px;
+    z-index: 2;
+}
+
+.custom-button {
+    display: inline-block;
+    padding: 0; /* Remove padding for custom images */
+    background-color: transparent; /* Transparent background */
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden; /* Hide overflow to prevent glowing image effect spill */
+}
+
+.custom-button img {
+    display: block;
+    width: 25px; /* Adjust the width */
+    height: 25px; /* Adjust the height */
+    transition: transform 0.2s ease-in-out;
+}
+
+#video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%; /* Adjust the width */
+    height: 50%; /* Adjust the height */
+    object-fit: cover;
+    z-index: -1;
+}
+
+#enter-page {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 3;
+}
+
+#enter-link {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#enter-link:hover {
+    background-color: #00aaff;
+}
+
+#background-music {
+    display: none;
+}
+
+.main-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+#typewriter-animation {
+    font-size: 24px;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid white;
+    animation: typing 3s steps(24) infinite;
+}
+
+#typing-container.typed {
+    animation: none;
+}
+
+@keyframes typing {
+    to {
+        width: 100%;
+    }
+}
+
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-container a {
+    display: inline-block;
+    margin: 6px;
+    text-decoration: none;
+}
+
+.button-container img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.button-container img:hover {
+    transform: scale(1.1);
+}
+
+/* ... Rest of your CSS ... */
+/* Add this CSS code to your existing styles.css file */
+
+/* Reset default styles and apply custom styles */
+body, h1, p, a {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+body {
+    background-color: #000;
+    overflow: hidden; /* Prevent scrollbars due to video overflow */
+}
+
+/* Enter page styles */
+.enter-page {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.enter-page h1 {
+    font-size: 48px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 123, 255, 0.8); /* Add text shadow for glowing effect */
+}
+
+.enter-page a {
+    padding: 15px 30px;
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.enter-page a:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* ... (other styles) ... */
+
+
+
